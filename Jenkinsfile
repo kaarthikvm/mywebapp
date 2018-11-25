@@ -1,16 +1,24 @@
 pipeline {
     agent any
-
+    tools { 
+        maven 'KaarthikMaven' 
+        //jdk 'jdk8' 
+    }
     stages {
+        stage ('Initialisation Stage') {
+            steps {
+                sh '''
+                     echo "PATH = ${PATH}"'
+                     echo "M2_HOME = ${M2_HOME}"
+                   '''
+            }
+        }
         stage ('Compile Stage') {
 
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
                     //sh 'mvn clean compile'
-                    echo "compilation"
-                    sh 'echo "PATH = ${PATH}"'
-                    sh 'echo "M2_HOME = ${M2_HOME}"'
-                
+                    echo "compilation"                                 
                 //}
             }
         }
