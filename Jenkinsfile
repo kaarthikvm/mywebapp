@@ -10,6 +10,8 @@ pipeline {
                 sh '''
                      echo "PATH = ${PATH}"
                      echo "M2_HOME = ${M2_HOME}"
+                     whoami
+                     ls /home/ec2-user/apache-maven-3.5.4                     
                    '''
             }
         }
