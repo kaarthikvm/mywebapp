@@ -6,7 +6,9 @@ pipeline {
 
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
-                    sh 'mvn clean compile'
+                    //sh 'mvn clean compile'
+                    echo "compilation"
+                
                 //}
             }
         }
@@ -15,7 +17,8 @@ pipeline {
 
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
-                    sh 'mvn test'
+                    //sh 'mvn test'
+                    echo "testing"
                 //}
             }
         }
@@ -24,7 +27,8 @@ pipeline {
         stage ('Packaging Stage') {
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
-                    sh 'mvn package'
+                    //sh 'mvn package'
+                    echo "packaging"
                 //}
             }
         }
