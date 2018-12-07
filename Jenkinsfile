@@ -52,7 +52,7 @@ pipeline {
                     echo "deloyment"
                     sh '''
                         ls /home/
-                        scp  target/*.war ubuntu@ec2-18-224-213-82.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
+                        scp  -o StrictHostKeyChecking=no target/*.war ubuntu@ec2-18-224-213-82.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
                         '''
                 //}
             }
