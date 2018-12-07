@@ -50,6 +50,9 @@ pipeline {
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
                     echo "deloyment"
+                    sh '''
+                        ls /home/
+                        '''
                 //}
             }
         }
