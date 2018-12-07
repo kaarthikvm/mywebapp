@@ -50,7 +50,9 @@ pipeline {
             steps {
                 //withMaven(maven : 'KaarthikMaven') {
                     echo "deloyment"
-                    scp  -i .ssh/KaaSSHKey.pem target/*.war ubuntu@ec2-18-224-213-82.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
+                    sh '''
+                        scp  -i .ssh/KaaSSHKey.pem target/*.war ubuntu@ec2-18-224-213-82.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
+                    '''
                 //}
             }
         }
