@@ -52,7 +52,7 @@ pipeline {
                     echo "deloyment"
                     sh '''
                         ls /home/
-                        scp  -o StrictHostKeyChecking=no -i /home/ec2-user/KaaSSHKey.pem target/*.war ubuntu@ec2-3-16-215-199.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
+                        scp  -o StrictHostKeyChecking=no -i /home/ec2-user/KaaSSHKey.pem target/*.war ubuntu@ec2-3-17-59-45.us-east-2.compute.amazonaws.com:/opt/tomcat/webapps/.
                         '''
                 //}
             }
